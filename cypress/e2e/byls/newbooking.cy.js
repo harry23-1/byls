@@ -69,4 +69,16 @@ describe("Booking Page", () => {
     BookingPage.conformBooking().click();
     cy.wrap();
   });
+  it.only('shows the detais and verify',()=>{
+
+    cy.visit('app-staging.getblys.com.au/bookings')
+    cy.contains('New Swedish Massage').click()
+    cy.contains('Subtotal').should('be.visible')
+    cy.contains('Peak hour').should('be.visible')
+    cy.contains('Staging processing fee').should('be.visible')
+    cy.contains('Total due').should('be.visible')
+    cy.contains('Summary').should('be.visible')
+
+
+  })
 });
