@@ -69,7 +69,7 @@ describe("Booking Page", () => {
     BookingPage.conformBooking().click();
     cy.wrap();
   });
-  it.only('shows the detais and verify',()=>{
+  it('shows the detais and verify',()=>{
 
     cy.visit('app-staging.getblys.com.au/bookings')
     cy.contains('New Swedish Massage').click()
